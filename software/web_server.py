@@ -22,19 +22,8 @@ stop = False
 
 app = Flask(__name__)
 pid = None
-#<img style="-webkit-user-select: none;margin: auto;background-color: hsl(0, 0%, 25%);" src="http://jo3.cc:8081/" width="641" height="360">
-#888 499
 webpage=\
 """
-<!--
-<style>
-img {
-display:inline-block;
-  }
-</style> 
-<img class="shrinkToFit" src="http://jo3.cc:8081/" alt="http://jo3.cc:8081/" width="426" height="240"></img>
-<img class="shrinkToFit" src="http://jo3.cc:8042/video.mjpg" alt="http://jo3.cc:8042/video.mjpg" width="426" height="240"></img>
--->
 <img class="shrinkToFit" src="http://jo3.cc:8081/" alt="http://jo3.cc:8081/" width="888" height="499"></img>
 <br>
 <body>
@@ -114,6 +103,7 @@ print("starting...")
 kit = ServoKit(channels=16)
 
 """NEUTRAL POSITION"""
+#0-BLL, 1-BLR, 2-BSL , 3-BSR, 4-BUL 5-BUR  ,10-FUR, 11-FUL, 12-FSR, 13-FSL, 14-FLL, 15-FLR
 #          0   1   2  3  4   5  10  11  12  13  14  15
 stand   = [50,80,80,80,140,100,130,140,80,100,90,100]
 
@@ -164,7 +154,6 @@ l2_diagonal_FRBL_back =         [-30,-20,-10,  0,-30,-25, 10, 30, 10,-20,  0,  0
 l2_diagonal_FRBL_back_forward = [-30,-20,-10,  0,-30,-25,-20,-40, 10,-20,-30,-20] 
 
 """BACKWARD CONFIGS"""
-#0-BLL, 1-BLR, 2-BSL , 3-BSR, 4-BUL 5-BUR  ,10-FUR, 11-FUL, 12-FSR, 13-FSL, 14-FLL, 15-FLR
 #                              0   1   2   3   4   5  10  11  12  13  14  15
 reverse_FLBR =              [ 20,  0,-10,  0, 30, 15,-20,-20,-10,  0,  0,-20]
 reverse_FLBR_back =         [ 20,  0,-10,-20, 30, 15,-20,-20,-10,-20,  0,-20]
